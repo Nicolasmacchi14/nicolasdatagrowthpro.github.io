@@ -2,223 +2,168 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nicolas | Software Developer & Data Analyst</title>
-  <meta name="description" content="Freelance Software Developer, Data Analyst & Automation Specialist helping international clients build scalable solutions." />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nicolas Datagrowthpro | Software, Data & Automation</title>
+  <meta name="description" content="Freelance Software Developer & Data Analyst helping businesses automate processes and grow with data.">
   <style>
-    :root {
-      --bg: #0b0d12;
-      --card: #111520;
-      --primary: #5b8cff;
-      --secondary: #22c55e;
-      --text: #e5e7eb;
-      --muted: #9ca3af;
-    }
-
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-
     body {
-      font-family: 'Inter', sans-serif;
-      background: radial-gradient(1200px 600px at 10% -10%, #1a1f3c, transparent), var(--bg);
-      color: var(--text);
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #0f172a;
+      color: #e5e7eb;
       line-height: 1.6;
     }
-
-    a { color: inherit; text-decoration: none; }
-
-    .container {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-
     header {
-      padding: 24px 0;
-      position: sticky;
-      top: 0;
-      background: rgba(11,13,18,0.8);
-      backdrop-filter: blur(10px);
-      z-index: 10;
+      padding: 80px 20px;
+      text-align: center;
+      background: linear-gradient(135deg, #020617, #020617);
     }
-
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+    h1 span {
+      color: #38bdf8;
     }
-
-    .logo {
-      font-weight: 800;
-      font-size: 1.2rem;
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 60px 20px;
     }
-
-    nav ul {
-      display: flex;
-      gap: 24px;
-      list-style: none;
-    }
-
     .btn {
       display: inline-block;
-      padding: 14px 28px;
-      border-radius: 10px;
-      font-weight: 600;
-      transition: .2s;
+      margin: 10px;
+      padding: 14px 26px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      background: #38bdf8;
+      color: #020617;
     }
-
-    .btn-primary {
-      background: linear-gradient(135deg, var(--primary), #7aa2ff);
-      color: #fff;
+    .btn.secondary {
+      background: transparent;
+      color: #38bdf8;
+      border: 2px solid #38bdf8;
     }
-
-    .btn-outline {
-      border: 1px solid rgba(255,255,255,0.2);
-    }
-
-    .hero {
-      padding: 120px 0 80px;
-      text-align: center;
-    }
-
-    .hero h1 {
-      font-size: 3rem;
-      font-weight: 800;
-      margin-bottom: 24px;
-    }
-
-    .hero span { color: var(--primary); }
-
-    .hero p {
-      max-width: 720px;
-      margin: 0 auto 32px;
-      color: var(--muted);
-    }
-
-    section { padding: 80px 0; }
-
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 24px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
     }
-
-    .card {
-      background: rgba(255,255,255,0.05);
-      border-radius: 18px;
-      padding: 28px;
-    }
-
     footer {
       text-align: center;
-      padding: 40px;
-      color: var(--muted);
+      padding: 30px;
+      background: #020617;
+      font-size: 14px;
+      color: #94a3b8;
+    }
+    .lang {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+    }
+    .lang button {
+      background: none;
+      border: none;
+      color: #38bdf8;
+      font-weight: bold;
+      cursor: pointer;
+      margin-left: 10px;
     }
   </style>
 </head>
-
 <body>
 
+<div class="lang">
+  <button onclick="setLang('en')">EN</button>
+  <button onclick="setLang('es')">ES</button>
+</div>
+
 <header>
-  <div class="container">
-    <nav>
-      <div class="logo">Nicolas.dev</div>
-      <ul>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
+  <h1 id="hero-title">
+    Building <span>Software</span>, <span>Data</span> & <span>Automation</span> Solutions That Drive Growth
+  </h1>
+  <p id="hero-text">
+    Freelance Software Developer & Data Analyst helping businesses automate processes, analyze data, and make better decisions.
+  </p>
+  <a href="#contact" class="btn" id="hire-btn">Hire Me</a>
+  <a href="#services" class="btn secondary" id="work-btn">View Services</a>
 </header>
 
-<section class="hero">
-  <div class="container">
-    <h1 id="hero-title">Building <span>Software</span>, <span>Data</span> & <span>Automation</span></h1>
-    <p id="hero-text">
-      Freelance Software Developer & Data Analyst helping international clients build scalable digital solutions.
-    </p>
-
-    <a href="#contact" class="btn btn-primary" id="hire-btn">Hire Me</a>
-    <a href="#services" class="btn btn-outline" id="work-btn">View Services</a>
-
-    <div style="margin-top:30px">
-      <button class="btn btn-outline" onclick="setLang('en')">EN</button>
-      <button class="btn btn-outline" onclick="setLang('es')">ES</button>
-    </div>
-  </div>
+<section id="about">
+  <h2 id="about-title">About Me</h2>
+  <p id="about-text">
+    I’m a freelance Software Developer and Data Analyst focused on building efficient, scalable, and data-driven solutions.
+    I help businesses automate workflows, analyze data, and transform information into actionable insights using Python,
+    SQL, Power BI, and modern web technologies.
+  </p>
 </section>
 
 <section id="services">
-  <div class="container">
-    <div class="grid">
-      <div class="card">
-        <h3>💻 Software Development</h3>
-        <p>Custom web applications and internal tools.</p>
-      </div>
-      <div class="card">
-        <h3>📊 Data Analysis</h3>
-        <p>Dashboards, reports and insights using real data.</p>
-      </div>
-      <div class="card">
-        <h3>⚙ Automation</h3>
-        <p>Python scripts and workflow automation.</p>
-      </div>
+  <h2 id="services-title">Services</h2>
+  <div class="grid">
+    <div>
+      <h3>Data Analysis & Visualization</h3>
+      <p>Dashboards, SQL insights, Power BI & Excel reports for better decisions.</p>
     </div>
-  </div>
-</section>
-
-<section id="about">
-  <div class="container">
-    <div class="card">
-      <p>
-        I work with clients worldwide, delivering reliable, scalable and data-driven solutions with clear communication.
-      </p>
+    <div>
+      <h3>Automation</h3>
+      <p>Python automation, optimized workflows, and time-saving solutions.</p>
+    </div>
+    <div>
+      <h3>Software & Web Solutions</h3>
+      <p>Custom tools, internal systems, and scalable software solutions.</p>
     </div>
   </div>
 </section>
 
 <section id="contact">
-  <div class="container">
-    <div class="card" style="text-align:center">
-      <h2>Let’s work together</h2>
-      <p>Available for freelance projects worldwide</p>
-      <a href="mailto:your@email.com" class="btn btn-primary">Contact Me</a>
-    </div>
-  </div>
+  <h2 id="contact-title">Let’s Work Together</h2>
+  <p id="contact-text">
+    Looking for a reliable professional to help your business grow? Let’s talk.
+  </p>
+  <a href="mailto:your@email.com" class="btn">Contact Me</a>
 </section>
 
 <footer>
-  © 2026 Nicolas – Software Developer & Data Analyst
+  © 2026 Nicolas Datagrowthpro — Software • Data • Automation
 </footer>
 
 <script>
   const content = {
     en: {
-      title: "Building <span>Software</span>, <span>Data</span> & <span>Automation</span>",
-      text: "Freelance Software Developer & Data Analyst helping international clients build scalable digital solutions.",
+      heroTitle: "Building <span>Software</span>, <span>Data</span> & <span>Automation</span> Solutions That Drive Growth",
+      heroText: "Freelance Software Developer & Data Analyst helping businesses automate processes, analyze data, and make better decisions.",
       hire: "Hire Me",
-      work: "View Services"
+      work: "View Services",
+      aboutTitle: "About Me",
+      aboutText: "I’m a freelance Software Developer and Data Analyst focused on building efficient, scalable, and data-driven solutions. I help businesses automate workflows, analyze data, and transform information into actionable insights using Python, SQL, Power BI, and modern web technologies.",
+      servicesTitle: "Services",
+      contactTitle: "Let’s Work Together",
+      contactText: "Looking for a reliable professional to help your business grow? Let’s talk."
     },
     es: {
-      title: "Desarrollo <span>Software</span>, <span>Datos</span> y <span>Automatización</span>",
-      text: "Desarrollador de software y analista de datos freelance trabajando con clientes internacionales.",
+      heroTitle: "Desarrollo <span>Software</span>, <span>Datos</span> y <span>Automatización</span> para Impulsar tu Negocio",
+      heroText: "Desarrollador de software y analista de datos freelance ayudando a empresas a automatizar procesos y tomar mejores decisiones.",
       hire: "Contratar",
-      work: "Ver Servicios"
+      work: "Ver Servicios",
+      aboutTitle: "Sobre mí",
+      aboutText: "Soy desarrollador de software y analista de datos freelance, especializado en crear soluciones eficientes, escalables y orientadas a datos. Ayudo a empresas a automatizar procesos y transformar información en insights accionables utilizando Python, SQL, Power BI y tecnologías web modernas.",
+      servicesTitle: "Servicios",
+      contactTitle: "Trabajemos juntos",
+      contactText: "¿Buscás un profesional confiable para hacer crecer tu negocio? Hablemos."
     }
   };
 
   function setLang(lang) {
-    document.getElementById("hero-title").innerHTML = content[lang].title;
-    document.getElementById("hero-text").innerText = content[lang].text;
+    document.getElementById("hero-title").innerHTML = content[lang].heroTitle;
+    document.getElementById("hero-text").innerText = content[lang].heroText;
     document.getElementById("hire-btn").innerText = content[lang].hire;
     document.getElementById("work-btn").innerText = content[lang].work;
+    document.getElementById("about-title").innerText = content[lang].aboutTitle;
+    document.getElementById("about-text").innerText = content[lang].aboutText;
+    document.getElementById("services-title").innerText = content[lang].servicesTitle;
+    document.getElementById("contact-title").innerText = content[lang].contactTitle;
+    document.getElementById("contact-text").innerText = content[lang].contactText;
   }
 </script>
 
 </body>
 </html>
+
